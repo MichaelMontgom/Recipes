@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse_lazy
 
 from .forms import CreateNewRecipe
-from .models import Recipe, Ingredients
+from .models import Recipe
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 
@@ -45,12 +45,12 @@ class RecipesView(DetailView):
 
 class RecipesCreate(CreateView):
     model = Recipe
-    fields = ['name', 'author', 'instructions', 'serving_size']
+    fields = ['name', 'author', 'ingredients', 'instructions', 'serving_size']
     success_url = reverse_lazy('recipes_list')
 
 class RecipesUpdate(UpdateView):
     model = Recipe
-    fields = ['name', 'author', 'instructions', 'serving_size']
+    fields = ['name', 'author', 'ingredients', 'instructions', 'serving_size']
     success_url = reverse_lazy('recipes_list')
 
 class RecipesDelete(DeleteView):

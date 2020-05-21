@@ -6,4 +6,12 @@ Home
 
 <h1>Home</h1>
 {% block content %}
+
+    <ul>
+        {% for recipe in recipes %}
+        <li>{{recipe.name}}</li>
+        <li>{{recipe.instructions}}</li>
+
+        {% endfor %}
+    </ul>
 {% endblock content %}

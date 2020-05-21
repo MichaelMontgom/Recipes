@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+View Recipe
+{% endblock title %}
+
+{% block content %}
+<h1>Recipe Delete</h1>
+<form method="post">{% csrf_token %}
+    Are you sure you want to delete "{{ object }}" ?
+    <input type="submit" value="Submit" />
+</form>
+
+
+{% endblock content %}

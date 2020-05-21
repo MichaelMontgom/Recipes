@@ -44,8 +44,8 @@
  
 <body>
 	<div class="sidenav">
-		<a href="/">Home</a>
-		<a href="/create">Create</a>
+		<a href="{% url "recipes_list"  %}">Home</a>
+		<a href="{% url "recipes_new"  %}">Create</a>
 		{% comment %} <a href="/2">View</a>
         <a href='/register'>Register</a> {% endcomment %}
 	</div>

@@ -8,8 +8,14 @@ Create
 {% block content %}
 <h1>Recipe Edit</h1>
 <form method="post">{% csrf_token %}
+    <div>
     {{ form|crispy }}
+
+    <h2>ingredients</h2>
+    {{ingredients|crispy}}
+
     <input type="submit" value="Submit" />
+    </div>
 </form>
 
 {% endblock content %}

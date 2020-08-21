@@ -5,7 +5,26 @@ View Recipe
 {% endblock title %}
 
 {% block content %}
-<h1>{{object.name}}</h1>
+<h2>Recipe Name: {{object.name}}</h2>
+
+<table class="table">
+  <tr>
+    <th>Author:</th>
+    <td>{{object.author}}</td>
+  </tr>
+  <tr>
+    <th>Ingredients:</th>
+    <td>{{object.ingredients}}</td>
+  </tr>
+  <tr>
+    <th>Instructions</th>
+    <td>{{object.instructions}}</td>
+  </tr>
+    <tr>
+    <th>Serving Size</th>
+    <td>{{object.serving_size}}</td>
+  </tr>
+</table>
 
 
 {% endblock content %}
